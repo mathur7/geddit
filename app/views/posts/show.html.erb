@@ -1,0 +1,15 @@
+
+<p><%= @post.title %></p>
+<p><%= @post.url %></p>
+<p><%= @post.body %></p>
+
+<%= form_for ([@post, @comment]) do |f| %>
+  <%= f.text_field :body, placeholder: "Add your comment" %><br></br>
+  <%= f.submit "Create comment" %><br></br>
+<% end %>
+
+
+<%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Delete", @post, method: :delete, data: {confirm: "Are You Sure?"} %>
+
+

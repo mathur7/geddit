@@ -1,0 +1,7 @@
+<h1> Edit your post! </h1>
+<%= form_for @post do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %><br></br>
+  <%= f.text_field :url, placeholder: "Url" %><br></br>
+  <%= f.text_field :body, placeholder: "Body" %><br></br>
+  <%= f.submit  %>
+<% end %>

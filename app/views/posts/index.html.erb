@@ -1,0 +1,13 @@
+<h1> Welcome to Geddit! </h1>
+
+<% @posts.each do |post| %>
+<%= link_to post.title, post_path(post) %> <br></br>
+<%= link_to post.url, post_path(post) %> <br></br>
+<%= link_to post.body, post_path(post) %> <br></br>
+
+<% end %>
+
+
+
+
+

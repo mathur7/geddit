@@ -4,7 +4,8 @@ Geddit::Application.routes.draw do
   resources :posts do
     resources :comments 
   end
-  root to: "posts#index"
+
+  root to: "post#index"
 #   Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
@@ -21,7 +22,7 @@ Geddit::Application.routes.draw do
 #                          PATCH  /users(.:format)               devise/registrations#update
 #                          PUT    /users(.:format)               devise/registrations#update
 #                          DELETE /users(.:format)               devise/registrations#destroy
-# post_comments GET    /posts/:post_id/comments(.:format)          comments#index
+#            post_comments GET    /posts/:post_id/comments(.:format)          comments#index
 #                          POST   /posts/:post_id/comments(.:format)          comments#create
 #         new_post_comment GET    /posts/:post_id/comments/new(.:format)      comments#new
 #        edit_post_comment GET    /posts/:post_id/comments/:id/edit(.:format) comments#edit
@@ -37,5 +38,5 @@ Geddit::Application.routes.draw do
 #                          PATCH  /posts/:id(.:format)                        posts#update
 #                          PUT    /posts/:id(.:format)                        posts#update
 #                          DELETE /posts/:id(.:format)                        posts#destroy
-#                     root GET    /                                           posts#index
+#                     root GET    /                                           post#index
 end
